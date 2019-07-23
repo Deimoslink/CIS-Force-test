@@ -1,0 +1,9 @@
+@import '../../global.scss';
+
+.list-wrapper {
+  @include show-flex(row, center);
+}
+
+.user-card {
+  margin: 2em;
+}

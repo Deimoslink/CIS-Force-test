@@ -1,0 +1,16 @@
+// VARS
+
+$color-aquagreen: #47C0CA;
+
+// MIXINS
+
+@mixin square($side: auto) {
+  width: $side;
+  height: $side;
+}
+
+@mixin show-flex($direction: row, $content: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+}

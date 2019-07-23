@@ -1,0 +1,12 @@
+<div class="list-wrapper">
+  <div *ngFor="let user of users?.data" class="user-card">
+    <a [routerLink]="['../user-page', user.id]">{{user.first_name}} {{user.last_name}}</a>
+    <p>{{user.email}}</p>
+    <img [src]="user.avatar" alt="">
+  </div>
+</div>
+
+<app-paginator *ngIf="pagination.totalPages > 1"
+               [currentPage]="pagination.currentPage"
+               [totalPages]="pagination.totalPages"
+               (refreshCurrentPage)="refreshRequest($event)"></app-paginator>

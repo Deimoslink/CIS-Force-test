@@ -1,0 +1,7 @@
+<button [routerLink]="['../../user-list']">Back</button>
+<ng-container *ngIf="user">
+  <p>{{user.first_name}} {{user.last_name}}</p>
+  <p>{{user.email}}</p>
+  <img [src]="user.avatar" alt="">
+</ng-container>
+

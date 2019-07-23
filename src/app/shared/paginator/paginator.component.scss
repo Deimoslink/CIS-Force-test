@@ -1,0 +1,55 @@
+@import '../../../global.scss';
+
+ul.ul-style-reset {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+ul.paginator {
+  @include show-flex(row, center);
+  margin: 2em 0;
+  user-select: none;
+  li {
+    box-sizing: border-box;
+    font-size: 1em;
+    line-height: 2em;
+    text-align: center;
+    color: $color-aquagreen;
+    text-decoration: none;
+    cursor: pointer;
+    &.hide {
+      visibility: hidden;
+    }
+    &:nth-of-type(1), &:nth-of-type(2) {
+      margin-right: 2em;
+    }
+    &:nth-last-of-type(1), &:nth-last-of-type(2) {
+      margin-left: 2em;
+    }
+  }
+  .paginator-btn {
+    @include square(2em);
+    margin: 0 1px;
+    border: 1px solid white;
+    border-radius: 5px;
+    &:hover {
+      color: darken($color-aquagreen, 15%);
+      border: 1px solid darken($color-aquagreen, 15%);
+    }
+    &.active {
+      border: 1px solid $color-aquagreen;
+      background-color: $color-aquagreen;
+      color: white;
+      &:hover{
+        border: 1px solid darken($color-aquagreen, 15%);
+        background-color: darken($color-aquagreen, 15%);
+      }
+    }
+  }
+  .paginator-edge-btn:hover {
+    color: darken($color-aquagreen, 15%);
+  }
+}
