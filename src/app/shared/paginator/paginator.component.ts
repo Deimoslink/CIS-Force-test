@@ -6,19 +6,16 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
   styleUrls: ['./paginator.component.scss']
 })
 export class PaginatorComponent implements OnInit, OnChanges {
-
   @Input() currentPage = 1;
   @Input() totalPages;
   @Output() refreshCurrentPage: EventEmitter<any> = new EventEmitter();
-  first: boolean;
-  last: boolean;
-  sliceBtnsFrom = 1;
-  sliceBtnsTo = 6;
-  pagesArray = [];
+  public first: boolean;
+  public last: boolean;
+  public sliceBtnsFrom = 1;
+  public sliceBtnsTo = 6;
+  public pagesArray = [];
 
-  constructor() { }
-
-  checkIfEdge() {
+  private checkIfEdge() {
     this.first = false;
     this.last = false;
     if (this.currentPage === 1) {
@@ -29,7 +26,7 @@ export class PaginatorComponent implements OnInit, OnChanges {
     }
   }
 
-  refreshView() {
+  private refreshView() {
     if (this.totalPages > 5) {
       if (this.currentPage <= 3) {
         this.sliceBtnsFrom = 0;
@@ -51,7 +48,7 @@ export class PaginatorComponent implements OnInit, OnChanges {
   }
 
 
-  changePage(num) {
+  public changePage(num) {
     if (num === this.currentPage) {
       return;
     }

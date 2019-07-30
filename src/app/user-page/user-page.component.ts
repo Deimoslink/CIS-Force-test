@@ -3,8 +3,8 @@ import {ApiService} from '../shared/api.service';
 import {Subject} from 'rxjs';
 import {ActivatedRoute} from '@angular/router';
 import {takeUntil} from 'rxjs/operators';
-import {UserI} from '../shared/user';
-import {PayloadI} from '../shared/payload';
+import {UserI} from '../shared/interfaces/user';
+import {PayloadI} from '../shared/interfaces/payload';
 
 @Component({
   selector: 'app-user-page',

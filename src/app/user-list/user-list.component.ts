@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subject} from 'rxjs';
-import {PageI} from '../shared/page';
-import {UserI} from '../shared/user';
+import {PageI} from '../shared/interfaces/page';
+import {UserI} from '../shared/interfaces/user';
 import {ApiService} from '../shared/api.service';
 import {switchMap, takeUntil} from 'rxjs/operators';
 
